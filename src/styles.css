@@ -2,12 +2,6 @@ html {
   background-color: #fbfbfb;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* App.js*/
 .container {
   display: flex;
@@ -16,22 +10,46 @@ html {
   margin: 100px 0 0 0;
 }
 
-.query-oscar-award {
-  border: 2px solid #cd7346;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-size: 40px;
+  margin: 40px 0 10px 0;
+}
+
+.description-paragraph {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.ready-made-queries {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px
+}
+
+.ready-made-query-button {
+  border: 2px solid #a54211;
   border-radius: 16px;
-  
   height: 40px;
-  background-color: #cd7346;
+  background-color: #a54211;
   transition: all .2s;
   color: #fff;
   font-size: 12pt;
-  margin: 20px 0;
+  margin: 5px;
 }
 
-.query-oscar-award:hover {
-  border: 2px solid #9d3400;
+.ready-made-query-button:hover {
+  border: 2px solid #a54211;
   background-color: transparent;
-  color:#9d3400;
+  color:#a54211;
 }
 /*QueryInput.js*/
 .input-container{
@@ -72,6 +90,11 @@ gap: 30px;
   flex-direction: column;
   align-items: center;
 }
+
+.result-header {
+  font-size: 32px;
+}
+
 .result-table {
   width: 600px;
 }

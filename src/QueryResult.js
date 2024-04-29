@@ -14,7 +14,7 @@ function QueryResult({ result }) {
 
     return (
       <div className='result-container'>
-        <h2>Query Result</h2>
+        <h2 className='result-header'>Query Result</h2>
         <table className='result-table'>
           <thead>
             <tr>
