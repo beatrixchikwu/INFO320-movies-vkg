@@ -28,12 +28,31 @@ function App() {
     }
   };
 
+  const handleQueryOscarAward = () => {
+    const query = `PREFIX : <http://example.org/ontology/>
+      SELECT ?movietitle ?oscaraward
+      WHERE {
+        ?movie a :Movie ;
+          :title ?movietitle ;
+          :isWinnerOf ?oscaraward .
+      
+        ?oscaraward a :OscarAward ;
+      }`;
+    executeQuery(query);
+  };
+
   return (
     <div className='container'>
-      <h1 className='header'>Explore our Movie Knowledge Graph</h1>
-      <QueryInput onSubmit={executeQuery} />
-      {error && <div>Error: {error}</div>}
-      {result && <QueryResult result={result} />}
+      <div className='content'>
+        <h1 className='header'>Explore our Movie Knowledge Graph</h1>
+        <p>Try some of these suggested queries or enter your own in the box below</p>
+        <button className='query-oscar-award' onClick={handleQueryOscarAward}>
+         Which movies have won an Oscar Award?
+        </button>
+        <QueryInput className='input-box' onSubmit={executeQuery} />
+        {error && <div>Error: {error}</div>}
+        {result && <QueryResult result={result} />}
+      </div>
     </div>
   );
 }
