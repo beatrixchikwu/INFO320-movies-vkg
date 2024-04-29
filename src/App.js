@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import QueryInput from './QueryInput';
 import QueryResult from './QueryResult';
-import './App.css';
+import './styles.css';
 
 function App() {
   const [result, setResult] = useState(null);
