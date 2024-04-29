@@ -1,5 +1,5 @@
 html {
-  background-color: #fbfbfb;
+  background-color: #ffd7fc;
 }
 
 /* App.js*/
@@ -17,8 +17,13 @@ html {
 }
 
 .header {
-  font-size: 40px;
+  font-size: 50px;
   margin: 40px 0 10px 0;
+  font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #9d3400;
 }
 
 .description-paragraph {
@@ -63,7 +68,8 @@ gap: 30px;
   min-height: 250px;
   width: 500px;
   border-radius: 4px;
-  border: 2px solid #e5ae84;
+  border: 2px solid #9d3400;
+  background-color: #e8f0f0;
 }
 
 .input-button {
