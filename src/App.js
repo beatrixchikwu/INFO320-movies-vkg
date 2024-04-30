@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import QueryInput from './QueryInput';
 import QueryResult from './QueryResult';
+import ActorSearch from './ActorSearch';
 import './styles.css';
 import { handleQueryOscarAward, handleQueryDialogueEditor, handleMovieInformation } from './QueryFunctions/QueryFunctions';
 import { handleAnimationGenre } from './QueryFunctions/QueryGenreFunctions';
-
 
 function App() {
   const [result, setResult] = useState(null);
@@ -53,22 +53,24 @@ function App() {
             <div className='search-container'>
                   <button className='ready-made-query-button' >Search for Movie</button>
 
-                  <button className='ready-made-query-button' >Search for Actor</button>
-
                   <button className='ready-made-query-button' >Search for Crew</button>
-                  {/* <button className='ready-made-query-button' onClick={() =>handleQueryDialogueEditor(executeQuery)}>
-                  Give me a list of movies and their dialogue editors.
-                  </button> */}
+                  
+                  <ActorSearch onSubmit={executeQuery}/>
             </div>
         </div>
-      
-        <div className='genre-filter'>
-              <button className='ready-made-query-button' >Filter on Genre</button>
-              <button className='ready-made-query-button' onClick={() => handleAnimationGenre(executeQuery)}>
-              Animation (ser jo helt jævlig ut av en eller annen grunn)
-              </button>
+        <div>
+            <div>
+                  <button className='ready-made-query-button'>
+                  Filter by Genre
+                  </button>
+
+                  <button className='ready-made-query-button' onClick={() => handleAnimationGenre(executeQuery)}>
+                  Animation
+                  </button>
+            </div>
+
         </div>
-            
+
         {/* <QueryInput className='input-box' onSubmit={executeQuery} />
         {error && <div>Error: {error}</div>} */}
         {result && <QueryResult result={result} />}

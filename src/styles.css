@@ -107,13 +107,11 @@ gap: 30px;
 }
 
 .search-container {
-  /* display: flex;
-  flex-direction: column; */
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
 }
 
 .genre-filter {
-  background-color: black;
   display: flex;
   flex-direction: column;
 }
