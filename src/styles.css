@@ -8,12 +8,7 @@ html {
   flex-direction: column;
   align-items: center;
   margin: 100px 0 0 0;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: antiquewhite;
 }
 
 .header {
@@ -33,10 +28,11 @@ html {
 
 .ready-made-queries {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 800px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin-bottom: 30px
 }
 
@@ -56,6 +52,7 @@ html {
   background-color: transparent;
   color:#a54211;
 }
+
 /*QueryInput.js*/
 .input-container{
 display: flex;
@@ -107,4 +104,16 @@ gap: 30px;
 
 .result-table {
   width: 600px;
+}
+
+.search-container {
+  /* display: flex;
+  flex-direction: column; */
+  background-color: aqua;
+}
+
+.genre-filter {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
 }

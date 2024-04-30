@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import QueryInput from './QueryInput';
 import QueryResult from './QueryResult';
 import './styles.css';
@@ -37,34 +37,41 @@ function App() {
 
   return (
     <div className='container'>
-      <div className='content'>
         <h1 className='header'>Explore our Movie Knowledge Graph</h1>
         <p className='description-paragraph'>Try some of these suggested SPARQL queries or enter your own in the box below.</p>
         <div className='ready-made-queries'>
-            <button className='ready-made-query-button' >Search for Actor</button>
+            <div>
+                  <button className='ready-made-query-button' onClick={() => handleMovieInformation(executeQuery)}>
+                  All Movies
+                  </button>
 
-            <button className='ready-made-query-button' >Search for Crew</button>
-            {/* <button className='ready-made-query-button' onClick={() =>handleQueryDialogueEditor(executeQuery)}>
-            Give me a list of movies and their dialogue editors.
-            </button> */}
-
-            <button className='ready-made-query-button' >Filter on Genre</button>
-            {/* <button className='ready-made-query-button' onClick={() => handleAnimationGenre(executeQuery)}>
-            Animation (ser jo helt jævlig ut av en eller annen grunn)
-            </button> */}
-
-            <button className='ready-made-query-button' onClick={() => handleQueryOscarAward(executeQuery)}>
-            Oscar Award Winning Movies
-            </button>
+                  <button className='ready-made-query-button' onClick={() => handleQueryOscarAward(executeQuery)}>
+                  Oscar Award Winning Movies
+                  </button>
+            </div>
             
-            <button className='ready-made-query-button' onClick={() => handleMovieInformation(executeQuery)}>
-            All Movies
-            </button>
+            <div className='search-container'>
+                  <button className='ready-made-query-button' >Search for Movie</button>
+
+                  <button className='ready-made-query-button' >Search for Actor</button>
+
+                  <button className='ready-made-query-button' >Search for Crew</button>
+                  {/* <button className='ready-made-query-button' onClick={() =>handleQueryDialogueEditor(executeQuery)}>
+                  Give me a list of movies and their dialogue editors.
+                  </button> */}
+            </div>
         </div>
-        <QueryInput className='input-box' onSubmit={executeQuery} />
-        {error && <div>Error: {error}</div>}
+      
+        <div className='genre-filter'>
+              <button className='ready-made-query-button' >Filter on Genre</button>
+              <button className='ready-made-query-button' onClick={() => handleAnimationGenre(executeQuery)}>
+              Animation (ser jo helt jævlig ut av en eller annen grunn)
+              </button>
+        </div>
+            
+        {/* <QueryInput className='input-box' onSubmit={executeQuery} />
+        {error && <div>Error: {error}</div>} */}
         {result && <QueryResult result={result} />}
-      </div>
     </div>
   );
 }
