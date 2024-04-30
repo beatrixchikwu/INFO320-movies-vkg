@@ -1,10 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import QueryInput from './QueryInput';
 import QueryResult from './QueryResult';
+import ActorSearch from './ActorSearch';
 import './styles.css';
 import { handleQueryOscarAward, handleQueryDialogueEditor, handleMovieInformation } from './QueryFunctions/QueryFunctions';
 import { handleAnimationGenre } from './QueryFunctions/QueryGenreFunctions';
-
 
 function App() {
   const [result, setResult] = useState(null);
@@ -61,6 +61,7 @@ function App() {
             All Movies
             </button>
         </div>
+        <ActorSearch onSubmit={executeQuery} />
         <QueryInput className='input-box' onSubmit={executeQuery} />
         {error && <div>Error: {error}</div>}
         {result && <QueryResult result={result} />}
