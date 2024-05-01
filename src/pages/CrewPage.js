@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import QueryResult from '../QueryResult';
+import React, { useState } from "react";
 import NavigationBar from "../components/NavigationBar";
-import ActorSearch from '../components/ActorSearch';
-import '../styles.css';
+import CrewSearch from "../components/CrewSearch";
+import QueryResult from "../QueryResult";
 
-
-function ActorPage () {
+function CrewPage () {
     const [result, setResult] = useState(null);
     const [error, setError] = useState(null);
 
@@ -28,18 +26,18 @@ function ActorPage () {
         setError(`Error: ${error.message}`);
         setResult(null);
         }
-  };
+    };
 
-  return (
-    <div className='actor-page-container'>
-        <NavigationBar/>
-        <h2>Actors</h2>
-        <p>Enter the name of a actor to see films they have starred in and what character they played.</p>
-        <ActorSearch className="actor-search-field" onSubmit={executeQuery}/>
-        {result && <QueryResult result={result} />} 
-    </div>
-    );   
+    return (
+        <div className="crew-page-container">
+            <NavigationBar/>
+            <h2>Crew</h2>
+            <p>Enter the name of a crew member to see their role in different movies.</p>
+            <CrewSearch className="actor-search-field" onSubmit={executeQuery}/>
+            {result && <QueryResult result={result} />}
+        </div>
+        
+    )
+}
 
-} 
-
-export default ActorPage;
+export default CrewPage;

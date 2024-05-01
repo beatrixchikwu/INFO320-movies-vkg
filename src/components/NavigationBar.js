@@ -9,6 +9,7 @@ function NavigationBar () {
             <ul className="navbar-menu">
                 <li><NavLink exact to="/" >Movies</NavLink></li>
                 <li><NavLink to="/actor">Actor</NavLink></li>
+                <li><NavLink to="/crew">Crew</NavLink></li>
                 <li><NavLink to="/genre">Genre</NavLink></li>
                 <li><NavLink to="/query-entry">Query Entry</NavLink></li>
             </ul>

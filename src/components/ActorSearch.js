@@ -26,6 +26,7 @@ function ActorSearch({ onSubmit }) {
       
         ?movie a :Movie ;
           :title ?movietitle .
+          FILTER regex(?Title, "^[a-zA-Z0-9 ]*$", "i")
       }`;
 
     onSubmit(query);

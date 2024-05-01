@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import QueryEntryPage from './pages/QueryEntryPage';
 import GenrePage from './pages/GenrePage';
+import CrewPage from './pages/CrewPage';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/actor",
     element: <ActorPage/>,
+  },
+  {
+    path: "/crew",
+    element: <CrewPage/>,
   },
   {
     path: "/genre",

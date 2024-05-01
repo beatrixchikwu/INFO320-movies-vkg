@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import QueryResult from './QueryResult';
 import NavigationBar from './components/NavigationBar';
+import MovieSearch from './components/MovieSearch';
 import './styles.css';
 
 
@@ -22,7 +23,7 @@ function App() {
         :releaseDate ?ReleaseDate ;
         :spokenLanguage ?spolan .
         FILTER regex(?Title, "^[a-zA-Z0-9 ]*$", "i")
-    }LIMIT 100`;
+    }LIMIT 500`;
     executeQuery(allMoviesQuery)
   }, []);
 
@@ -51,6 +52,8 @@ function App() {
     <div className='container'>
       <NavigationBar/>
       <h2>Movies</h2>
+      <p>Search for specific movies to see details about them.</p>
+      <MovieSearch className="actor-search-field" onSubmit={executeQuery}/>
       {result && <QueryResult result={result} />}
     </div>
   );
