@@ -15,17 +15,18 @@ function MovieSearch({ onSubmit }) {
 
   const handleMovieSearch = (movieTitle, onSubmit) => {
     const query = `PREFIX : <http://example.org/ontology/>
-      SELECT ?Title ?Rating ?Runtime ?Budget ?ReleaseDate ?spolan
-      WHERE {
-        ?movie a :Movie ;
-          :title ${movieTitle} ;
-          :rating ?Rating ;
-          :runtime ?Runtime ;
-          :budget ?Budget ;
-          :releaseDate ?ReleaseDate ;
-          :spokenLanguage ?spolan .
-        FILTER regex(?Title, "^[a-zA-Z0-9 ]*$", "i")
-      }`;
+    SELECT ?TMDBID ?Rating ?Runtime ?Budget ?ReleaseDate ?SpokenLanguage
+    WHERE {
+      ?TMDBID a :Movie ;
+        :title "${movieTitle}" ;
+        :rating ?Rating ;
+        :runtime ?Runtime ;
+        :budget ?Budget ;
+        :releaseDate ?ReleaseDate ;
+        :spokenLanguage ?SpokenLanguage .
+        FILTER regex(?SpokenLanguage, "^[a-zA-Z0-9 ]*$", "i")
+
+      }LIMIT 10`;
 
     onSubmit(query);
   };

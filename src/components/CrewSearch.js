@@ -16,17 +16,17 @@ function CrewSearch({ onSubmit }) {
   const handleCrewSearch = (crewName, onSubmit) => {
     const query = `PREFIX : <http://example.org/ontology/>
 
-    SELECT ?movietitle ?job
+    SELECT ?Title ?Job
     WHERE {
         ?person a :Person ;
             :name "${crewName}" ;
             ?p ?movie .
             FILTER(?p=:isWriterOf || ?p=:isDialogueEditorOf || ?p=:isExecutiveProducerOf || ?p=:isDirectorOf || ?p=:isProducerOf) .
-        ?person a ?job .
-            FILTER(?job=:Writer || ?job=:DialogueEditor || ?job=:ExecutiveProducer || ?job=:Director || ?job=:Producer) .
+        ?person a ?Job .
+            FILTER(?Job=:Writer || ?Job=:DialogueEditor || ?Job=:ExecutiveProducer || ?Job=:Director || ?Job=:Producer) .
     
         ?movie a :Movie ;
-            :title ?movietitle .
+            :title ?Title .
             FILTER regex(?Title, "^[a-zA-Z0-9 ]*$", "i")
     }`;
 

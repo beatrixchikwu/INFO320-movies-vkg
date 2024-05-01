@@ -13,7 +13,7 @@ function App() {
     document.title = "Movies VKG"; 
     const allMoviesQuery = `PREFIX : <http://example.org/ontology/>
 
-    SELECT ?Title ?Rating ?Runtime ?Budget ?ReleaseDate ?spolan
+    SELECT ?Title ?Rating ?Runtime ?Budget ?ReleaseDate ?SpokenLanguage
     WHERE {
       ?movie a :Movie ;
         :title ?Title ;
@@ -21,8 +21,10 @@ function App() {
         :runtime ?Runtime ;
         :budget ?Budget ;
         :releaseDate ?ReleaseDate ;
-        :spokenLanguage ?spolan .
+        :spokenLanguage ?SpokenLanguage .
         FILTER regex(?Title, "^[a-zA-Z0-9 ]*$", "i")
+        FILTER regex(?SpokenLanguage, "^[a-zA-Z0-9 ]*$", "i")
+
     }LIMIT 500`;
     executeQuery(allMoviesQuery)
   }, []);

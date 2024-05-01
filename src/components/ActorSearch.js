@@ -14,7 +14,7 @@ function ActorSearch({ onSubmit }) {
 
   const handleActorSearch = (actorName, onSubmit) => {
     const query = `PREFIX : <http://example.org/ontology/>
-      SELECT ?movietitle ?character
+      SELECT ?Title ?Character
       WHERE {
         ?actor a :Actor ;
           :name "${actorName}" ;
@@ -22,11 +22,11 @@ function ActorSearch({ onSubmit }) {
       
         ?role a :Role;
           :isRoleIn ?movie ;
-          :characterName ?character .
+          :characterName ?Character .
       
         ?movie a :Movie ;
-          :title ?movietitle .
-          FILTER regex(?Title, "^[a-zA-Z0-9 ]*$", "i")
+          :title ?Title .
+        FILTER regex(?Title, "^[a-zA-Z0-9 ]*$", "i")
       }`;
 
     onSubmit(query);
