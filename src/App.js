@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import QueryResult from './QueryResult';
 import NavigationBar from './components/NavigationBar';
 import './styles.css';
-import { handleQueryOscarAward, handleMovieInformation } from './QueryFunctions/QueryFunctions';
-import { handleAnimationGenre } from './QueryFunctions/QueryGenreFunctions';
+
 
 function App() {
   const [result, setResult] = useState(null);
@@ -11,6 +10,22 @@ function App() {
 
   useEffect(() => {
     document.title = "Movies VKG"; 
+    const allMoviesQuery = `PREFIX : <http://example.org/ontology/>
+
+    SELECT ?movie ?budget ?rating ?revenue ?releaseDate ?genre ?spolan ?title ?rt ?prodComp
+    WHERE {
+      ?movie a :Movie ;
+        :title ?title ;
+        :budget ?budget ;
+        :rating ?rating ;
+        :revenue ?revenue ;
+        :releaseDate ?releaseDate ;
+        :genre ?genre ;
+        :spokenLanguage ?spolan ;
+        :runtime ?runtime ;
+        :productionCompany ?prodComp . 
+    }`;
+    executeQuery(allMoviesQuery)
   }, []);
 
   const executeQuery = async (query) => {
@@ -38,39 +53,7 @@ function App() {
     <div className='container'>
       <NavigationBar/>
       <h2>Movies</h2>
-        <p className='description-paragraph'>Try some of these suggested SPARQL queries or enter your own in the box below.</p>
-        <div className='ready-made-queries'>
-            <div>
-                  <button className='ready-made-query-button' onClick={() => handleMovieInformation(executeQuery)}>
-                  All Movies
-                  </button>
-
-                  <button className='ready-made-query-button' onClick={() => handleQueryOscarAward(executeQuery)}>
-                  Oscar Award Winning Movies
-                  </button>
-            </div>
-            
-            <div className='search-container'>
-                  <button className='ready-made-query-button' >Search for Movie</button>
-
-                  <button className='ready-made-query-button' >Search for Crew</button>
-            </div>
-        </div>
-        <div>
-            <div>
-                  <button className='ready-made-query-button'>
-                  Filter by Genre
-                  </button>
-
-                  <button className='ready-made-query-button' onClick={() => handleAnimationGenre(executeQuery)}>
-                  Animation
-                  </button>
-            </div>
-        </div>
-
-        {/* <QueryInput className='input-box' onSubmit={executeQuery} />
-        {error && <div>Error: {error}</div>} */}
-        {result && <QueryResult result={result} />}
+      {result && <QueryResult result={result} />}
     </div>
   );
 }

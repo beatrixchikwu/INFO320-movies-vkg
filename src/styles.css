@@ -53,11 +53,11 @@ html {
 
 /*QueryInput.js*/
 .input-container{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 30px;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  }
 
 .input-box {
   min-height: 250px;
@@ -165,4 +165,19 @@ gap: 30px;
   border-radius: 20px;
   border: 1px solid #c37147;
   padding: 10px;
+}
+
+/*GenrePage.js*/
+.genre-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.genre-buttons {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
