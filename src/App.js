@@ -55,8 +55,6 @@ function App() {
                   <button className='ready-made-query-button' >Search for Movie</button>
 
                   <button className='ready-made-query-button' >Search for Crew</button>
-                  
-                  <ActorSearch onSubmit={executeQuery}/>
             </div>
         </div>
         <div>
@@ -69,7 +67,6 @@ function App() {
                   Animation
                   </button>
             </div>
-
         </div>
 
         {/* <QueryInput className='input-box' onSubmit={executeQuery} />

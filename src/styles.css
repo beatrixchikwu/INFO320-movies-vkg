@@ -7,7 +7,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: antiquewhite;
 }
 
 .header {
@@ -44,6 +43,7 @@ html {
   color: #fff;
   font-size: 12pt;
   margin: 5px;
+  width: fit-content;
 }
 
 .ready-made-query-button:hover {
@@ -87,7 +87,7 @@ gap: 30px;
 
 /*QueryResult.js*/
 .result-container {
-  margin-top: 50px;
+  margin: 50px 0 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,3 +134,24 @@ gap: 30px;
 ul#navbar-menu .active {
   font-weight: bold;
 } 
+
+/*ActorPage.js*/
+.actor-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actor-search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actor-search-input {
+  width: 250px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid #c37147;
+  padding: 10px;
+}

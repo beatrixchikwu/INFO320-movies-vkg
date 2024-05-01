@@ -33,14 +33,15 @@ function ActorSearch({ onSubmit }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className='actor-search-form' onSubmit={handleSubmit}>
         <input
+          className='actor-search-input'
           type="text"
           value={actorName}
           onChange={handleChange}
           placeholder="Enter actor name"
         />
-        <button type="submit">Search for actor</button>
+        <button className='ready-made-query-button' type="submit">Search for actor</button>
       </form>
     </div>
   );
