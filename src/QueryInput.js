@@ -15,7 +15,13 @@ function QueryInput({ onSubmit }) {
 
   return (
     <form className='input-container' onSubmit={handleSubmit}>
-      <textarea className='input-box' value={query} onChange={handleChange} rows={6} cols={50} />
+      <textarea 
+        className='input-box' 
+        value={query} 
+        onChange={handleChange} 
+        rows={6} 
+        cols={50} 
+        placeholder="Enter your query here..." />
       <button className='input-button'type="submit">Submit Query</button>
     </form>
   );

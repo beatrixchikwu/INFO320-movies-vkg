@@ -6,8 +6,6 @@ import '../styles.css';
 
 
 function ActorPage () {
-
-    
     const [result, setResult] = useState(null);
     const [error, setError] = useState(null);
 

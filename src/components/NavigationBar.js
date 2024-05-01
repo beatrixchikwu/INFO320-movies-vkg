@@ -7,9 +7,10 @@ function NavigationBar () {
         <div className="navbar-container">
             <h1 className='header'>Explore our Movie Knowledge Graph</h1>
             <ul className="navbar-menu">
-                <li><NavLink exact to="/" activeClassName="active-link">Movies</NavLink></li>
-                <li><NavLink to="/actor" activeClassName="active-link">Actor</NavLink></li>
-                <li><NavLink to="/query-entry" activeClassName="active-link">Query Entry</NavLink></li>
+                <li><NavLink exact to="/" >Movies</NavLink></li>
+                <li><NavLink to="/actor">Actor</NavLink></li>
+                <li><NavLink to="/genre">Genre</NavLink></li>
+                <li><NavLink to="/query-entry">Query Entry</NavLink></li>
             </ul>
         </div>
     )
