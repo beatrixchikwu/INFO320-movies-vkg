@@ -12,19 +12,17 @@ function App() {
     document.title = "Movies VKG"; 
     const allMoviesQuery = `PREFIX : <http://example.org/ontology/>
 
-    SELECT ?movie ?budget ?rating ?revenue ?releaseDate ?genre ?spolan ?title ?rt ?prodComp
+    SELECT ?Title ?Rating ?Runtime ?Budget ?ReleaseDate ?spolan
     WHERE {
       ?movie a :Movie ;
-        :title ?title ;
-        :budget ?budget ;
-        :rating ?rating ;
-        :revenue ?revenue ;
-        :releaseDate ?releaseDate ;
-        :genre ?genre ;
-        :spokenLanguage ?spolan ;
-        :runtime ?runtime ;
-        :productionCompany ?prodComp . 
-    }`;
+        :title ?Title ;
+        :rating ?Rating ;
+        :runtime ?Runtime ;
+        :budget ?Budget ;
+        :releaseDate ?ReleaseDate ;
+        :spokenLanguage ?spolan .
+        FILTER regex(?Title, "^[a-zA-Z0-9 ]*$", "i")
+    }LIMIT 100`;
     executeQuery(allMoviesQuery)
   }, []);
 
