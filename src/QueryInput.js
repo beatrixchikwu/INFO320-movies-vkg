@@ -22,7 +22,7 @@ function QueryInput({ onSubmit }) {
         rows={6} 
         cols={50} 
         placeholder="Enter your query here..." />
-      <button className='input-button'type="submit">Submit Query</button>
+      <button className='ready-made-query-button'type="submit">Submit Query</button>
     </form>
   );
 }

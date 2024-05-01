@@ -33,8 +33,8 @@ function GenrePage () {
     return (
         <div className="genre-page-container">
             <NavigationBar/>
-            <h2>Genre</h2>
-            <p>Filter movies based on their genre.</p>
+            <h2 className='page-header'>Genre</h2>
+            <p className="page-description">Filter movies based on their genre.</p>
             <div className="genre-buttons">
                 <button className='ready-made-query-button' onClick={() => handleAdventureGenre(executeQuery)}>Adventure</button>
                 <button className='ready-made-query-button' onClick={() => handleActionGenre(executeQuery)}>Action</button>

@@ -1,5 +1,22 @@
 html {
   background-color: #ffd7fc;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to right, #020849, #775f95), url(https://grainy-gradients.vercel.app/noise.svg);
+  color: #dfe1ff;
+}
+
+.page-header {
+  color: #dfe1ff;
+  margin: 0;
+  padding: 40px 0 10px 0;
+  font-family: "Epilogue", sans-serif;
+  font-size: 32px;
+}
+
+.page-description {
+  margin-bottom: 50px;
+  color: #fff;
 }
 
 /* App.js*/
@@ -16,7 +33,7 @@ html {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  color: #9d3400;
+  color: #dcd756;
 }
 
 .description-paragraph {
@@ -34,21 +51,21 @@ html {
 }
 
 .ready-made-query-button {
-  border: 2px solid #a54211;
+  border: 2px solid #dfe1ff;
+  background-color: transparent;
+  color:#dfe1ff;
   border-radius: 16px;
   height: 40px;
-  background-color: #a54211;
   transition: all .2s;
-  color: #fff;
   font-size: 12pt;
   margin: 5px;
   width: fit-content;
 }
 
 .ready-made-query-button:hover {
-  border: 2px solid #a54211;
-  background-color: transparent;
-  color:#a54211;
+  border: 2px solid #dcd756;
+  background-color: #dcd756;
+  color: #471978;
 }
 
 /*QueryInput.js*/
@@ -64,25 +81,8 @@ html {
   min-height: 250px;
   width: 500px;
   border-radius: 4px;
-  border: 2px solid #9d3400;
-  background-color: #f4f6f6;
-}
-
-.input-button {
-  border: 2px solid #9d3400;
-  border-radius: 16px;
-  width: 150px;
-  height: 40px;
-  background-color: #9d3400;
-  transition: all .2s;
-  color: #fff;
-  font-size: 12pt;
-}
-
-.input-button:hover {
-  border: 2px solid #9d3400;
-  background-color: transparent;
-  color:#9d3400;
+  border: 2px solid #ffd219;
+  background-color: #dfe1ff;
 }
 
 /*QueryResult.js*/
@@ -94,11 +94,11 @@ html {
 }
 
 .result-header {
-  font-size: 32px;
+  font-size: 28px;
   font-family: "Epilogue", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #9d3400;
+  color: #dcd756;
 }
 
 .result-table {
@@ -133,7 +133,7 @@ html {
 }
 
 .navbar-menu a {
-  color: rgb(132, 132, 132); 
+  color: #dfe1ff; 
   font-weight: 700;
   font-size: 18px;
   text-decoration: none; 
@@ -141,8 +141,8 @@ html {
 }
 
 .navbar-menu a:hover {
-  color: #9d3400; 
-  font-size: 22px;
+  color: #dcd756; 
+  font-size: 24px;
 }
 
 
@@ -158,13 +158,15 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 120px;
+  justify-content: space-evenly;
 }
 
 .actor-search-input {
   width: 250px;
   height: 20px;
   border-radius: 20px;
-  border: 1px solid #c37147;
+  border: 1px solid #dcd756;
   padding: 10px;
 }
 

@@ -31,8 +31,8 @@ function CrewPage () {
     return (
         <div className="crew-page-container">
             <NavigationBar/>
-            <h2>Crew</h2>
-            <p>Enter the name of a crew member to see their role in different movies.</p>
+            <h2 className='page-header'>Crew</h2>
+            <p className="page-description">Enter the name of a crew member to see their role in different movies.</p>
             <CrewSearch className="actor-search-field" onSubmit={executeQuery}/>
             {result && <QueryResult result={result} />}
         </div>

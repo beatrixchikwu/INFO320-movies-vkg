@@ -35,8 +35,8 @@ function QueryEntryPage () {
   return (
     <div className='actor-page-container'>
         <NavigationBar/>
-        <h2>Query Entry</h2>
-        <p>Enter your own SPARQL queries in the box below.</p>
+        <h2 className='page-header'>Query Entry</h2>
+        <p className="page-description">Enter your own SPARQL queries in the box below.</p>
         <QueryInput className='input-box' onSubmit={executeQuery} />
         {error && <div>Error: {error}</div>}
         {result && <QueryResult result={result} />}

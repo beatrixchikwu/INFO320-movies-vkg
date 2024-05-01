@@ -53,8 +53,8 @@ function App() {
   return (
     <div className='container'>
       <NavigationBar/>
-      <h2>Movies</h2>
-      <p>Search for specific movies to see details about them.</p>
+      <h2 className='page-header'>Movies</h2>
+      <p className="page-description">Search for specific movies to see details about them.</p>
       <MovieSearch className="actor-search-field" onSubmit={executeQuery}/>
       {result && <QueryResult result={result} />}
     </div>
