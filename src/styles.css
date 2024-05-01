@@ -129,11 +129,23 @@ gap: 30px;
   flex-direction: row;
   justify-content: space-evenly;
   width: 800px;
+  height: 40px;
 }
 
-ul#navbar-menu .active {
-  font-weight: bold;
-} 
+.navbar-menu a {
+  color: rgb(132, 132, 132); 
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none; 
+  transition: all .2s ease-in-out; 
+}
+
+.navbar-menu a:hover {
+  color: #9d3400; 
+  font-size: 22px;
+}
+
+
 
 /*ActorPage.js*/
 .actor-page-container {

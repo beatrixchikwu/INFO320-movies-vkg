@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import QueryInput from './QueryInput';
 import QueryResult from './QueryResult';
-import ActorSearch from './ActorSearch';
 import NavigationBar from './components/NavigationBar';
 import './styles.css';
-import { handleQueryOscarAward, handleQueryDialogueEditor, handleMovieInformation } from './QueryFunctions/QueryFunctions';
+import { handleQueryOscarAward, handleMovieInformation } from './QueryFunctions/QueryFunctions';
 import { handleAnimationGenre } from './QueryFunctions/QueryGenreFunctions';
 
 function App() {
@@ -39,6 +37,7 @@ function App() {
   return (
     <div className='container'>
       <NavigationBar/>
+      <h2>Movies</h2>
         <p className='description-paragraph'>Try some of these suggested SPARQL queries or enter your own in the box below.</p>
         <div className='ready-made-queries'>
             <div>

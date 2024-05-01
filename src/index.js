@@ -8,6 +8,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import QueryEntryPage from './pages/QueryEntryPage';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/actor",
     element: <ActorPage/>,
+  },
+  {
+    path: "/query-entry",
+    element: <QueryEntryPage/>,
   },
 ]);
 
