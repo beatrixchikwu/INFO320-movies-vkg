@@ -33,7 +33,7 @@ function QueryEntryPage () {
   };
 
   return (
-    <div className='actor-page-container'>
+    <div className='page-container'>
         <NavigationBar/>
         <h2 className='page-header'>Query Entry</h2>
         <p className="page-description">Enter your own SPARQL queries in the box below.</p>

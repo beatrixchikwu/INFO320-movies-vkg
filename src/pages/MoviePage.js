@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import QueryResult from './QueryResult';
-import NavigationBar from './components/NavigationBar';
-import MovieSearch from './components/MovieSearch';
-import './styles.css';
+import QueryResult from '../QueryResult';
+import NavigationBar from '../components/NavigationBar';
+import MovieSearch from '../components/MovieSearch';
+import '../styles.css';
 
 
-function App() {
+function MoviePage() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
 
@@ -51,7 +51,7 @@ function App() {
   };
 
   return (
-    <div className='container'>
+    <div className='page-container'>
       <NavigationBar/>
       <h2 className='page-header'>Movies</h2>
       <p className="page-description">Search for specific movies to see details about them.</p>
@@ -61,4 +61,4 @@ function App() {
   );
 }
 
-export default App;
+export default MoviePage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import MoviePage from './pages/MoviePage';
 import ActorPage from './pages/ActorPage';
 import reportWebVitals from './reportWebVitals';
 import {
@@ -15,7 +15,7 @@ import CrewPage from './pages/CrewPage';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <MoviePage/>,
   },
   {
     path: "/actor",

@@ -31,7 +31,7 @@ function ActorPage () {
   };
 
   return (
-    <div className='actor-page-container'>
+    <div className='page-container'>
         <NavigationBar/>
         <h2 className='page-header'>Actors</h2>
         <p className="page-description">Enter the name of a actor to see films they have starred in and what character they played.</p>
